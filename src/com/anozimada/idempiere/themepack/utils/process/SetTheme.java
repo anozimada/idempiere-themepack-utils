@@ -59,11 +59,11 @@ public class SetTheme extends SvrProcess {
 			if (para[i].getParameter() == null)
 				;
 			else if (name.equals("Value"))
-				pBaseTheme = para[i].getParameter().toString();
+				pBaseTheme = para[i].getParameterAsString();
 			else if (name.equals("Theme"))
-				pTheme = para[i].getParameter().toString();
+				pTheme = para[i].getParameterAsString();
 			else if (name.equals("IsDefault"))
-				pIsDefault = "Y".equals(para[i].getParameter());
+				pIsDefault = para[i].getParameterAsBoolean();
 			else
 				log.log(Level.SEVERE, "Unknown Parameter: " + name);
 		}
